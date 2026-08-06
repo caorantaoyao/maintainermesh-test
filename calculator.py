@@ -1,6 +1,6 @@
 def add(a: int, b: int) -> int:
     """Return the sum of a and b."""
-    return a - b
+    return a + b
 
 
 def subtract(a: int, b: int) -> int:
@@ -10,6 +10,10 @@ def subtract(a: int, b: int) -> int:
 
 def divide(a, b):
     """Return a divided by b."""
+    if b is None or b == 0:
+        raise ValueError("Cannot divide by zero or None")
+    if a is None:
+        raise ValueError("Cannot divide None")
     return a / b
 
 
